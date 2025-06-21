@@ -3,524 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Matheus Névoa - Especialista TOTVS Fluig & Desenvolvedor Front-End</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfólio de Matheus Névoa, especialista em TOTVS Fluig, automação com N8N e Agentes de IA, e desenvolvimento front-end. Transformando processos com tecnologia.">
+    <meta name="keywords" content="Matheus Névoa, TOTVS Fluig, N8N, IA, Inteligência Artificial, Front-End, Desenvolvedor, Portfólio">
+    <meta name="author" content="Matheus Névoa">
+    
+    <!-- Open Graph (OG) Tags para compartilhamento social -->
+    <meta property="og:title" content="Matheus Névoa - Especialista TOTVS Fluig & IA">
+    <meta property="og:description" content="Portfólio profissional focado em automação de processos, desenvolvimento front-end e soluções com inteligência artificial.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.seusite.com.br"> <!-- SUBSTITUIR PELA URL REAL -->
+    <meta property="og:image" content="https://www.seusite.com.br/preview.jpg"> <!-- SUBSTITUIR PELA URL REAL DA IMAGEM -->
+
+    <!-- Performance: Pré-conexão com o servidor de fontes -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Ícones (Font Awesome) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 25, 47, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #64ffda;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #ccd6f6;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #64ffda;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 50%;
-            background-color: #64ffda;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-            left: 0;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0a192f 0%, #112240 50%, #1e3a8a 100%);
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%2364ffda" opacity="0.1"/></svg>');
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #64ffda, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 20px #64ffda40); }
-            to { filter: drop-shadow(0 0 30px #64ffda80); }
-        }
-
-        .hero h2 {
-            font-size: 1.8rem;
-            color: #8892b0;
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: #a8b2d1;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #64ffda;
-            display: block;
-        }
-
-        .stat-label {
-            color: #8892b0;
-            font-size: 0.9rem;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #64ffda, #00d4aa);
-            color: #0a192f;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(100, 255, 218, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #64ffda;
-            border: 2px solid #64ffda;
-        }
-
-        .btn-secondary:hover {
-            background: #64ffda;
-            color: #0a192f;
-            transform: translateY(-3px);
-        }
-
-        /* About Section */
-        .about {
-            padding: 5rem 0;
-            background: #f8fafc;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 2.5rem;
-            color: #0a192f;
-            margin-bottom: 2rem;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            color: #64748b;
-            margin-bottom: 1.5rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .skill {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill:hover {
-            transform: translateY(-2px);
-        }
-
-        .skill i {
-            color: #64ffda;
-            font-size: 1.2rem;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
-            color: white;
-        }
-
-        .services h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #64ffda;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #8892b0;
-            margin-bottom: 4rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(100, 255, 218, 0.1);
-            border-color: rgba(100, 255, 218, 0.3);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #64ffda, #00d4aa);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-icon i {
-            font-size: 1.5rem;
-            color: #0a192f;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #ccd6f6;
-        }
-
-        .service-card p {
-            color: #8892b0;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card ul {
-            list-style: none;
-        }
-
-        .service-card li {
-            color: #a8b2d1;
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .service-card li::before {
-            content: '▶';
-            color: #64ffda;
-            position: absolute;
-            left: 0;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #0a192f;
-            margin-bottom: 4rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #64ffda, #00d4aa);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        .feature-icon i {
-            font-size: 2rem;
-            color: white;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            color: #0a192f;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: #64748b;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #64ffda 0%, #00d4aa 100%);
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2.5rem;
-            color: #0a192f;
-            margin-bottom: 1rem;
-        }
-
-        .contact p {
-            font-size: 1.2rem;
-            color: #0a192f;
-            margin-bottom: 3rem;
-            opacity: 0.8;
-        }
-
-        .contact-buttons {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .contact-btn {
-            padding: 1rem 2rem;
-            background: #0a192f;
-            color: #64ffda;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(10, 25, 47, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background: #0a192f;
-            color: #8892b0;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero h2 {
-                font-size: 1.4rem;
-            }
-
-            .hero-stats {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .contact-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        /* Animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    
+    <!-- Folha de Estilos Local -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav class="container">
             <div class="logo">Névoa</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
+            <div id="particles-container"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h1>Névoa</h1>
-                    <h2>Especialista TOTVS Fluig | Agentes de IA N8N | Desenvolvedor Front-End</h2>
+                    <h1>Matheus Névoa</h1>
+                    <h2><span id="typed-subtitle"></span></h2>
                     <p class="hero-subtitle">Transformando Processos Corporativos com Automação Inteligente e IA</p>
                     <div class="hero-stats">
                         <div class="stat">
@@ -554,46 +85,16 @@
                         <p>Atualmente cursando <strong>Tecnologia em Análise e Desenvolvimento de Sistemas</strong> para manter-me sempre atualizado com as mais recentes tecnologias do mercado.</p>
                     </div>
                     <div class="skills-grid">
-                        <div class="skill">
-                            <i class="fas fa-cogs"></i>
-                            <span>TOTVS Fluig</span>
-                        </div>
-                        <div class="skill">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="skill">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript ES6+</span>
-                        </div>
-                        <div class="skill">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill">
-                            <i class="fas fa-robot"></i>
-                            <span>N8N Workflows</span>
-                        </div>
-                        <div class="skill">
-                            <i class="fas fa-brain"></i>
-                            <span>Agentes de IA</span>
-                        </div>
-                        <div class="skill">
-                            <i class="fas fa-database"></i>
-                            <span>BPM/ECM</span>
-                        </div>
-                        <div class="skill">
-                            <i class="fas fa-chart-bar"></i>
-                            <span>Analytics</span>
-                        </div>
-                        <div class="skill">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>LGPD</span>
-                        </div>
+                        <div class="skill"><i class="fas fa-cogs" aria-hidden="true"></i><span>TOTVS Fluig</span></div>
+                        <div class="skill"><i class="fab fa-react" aria-hidden="true"></i><span>React</span></div>
+                        <div class="skill"><i class="fab fa-js" aria-hidden="true"></i><span>JavaScript ES6+</span></div>
+                        <div class="skill"><i class="fab fa-html5" aria-hidden="true"></i><span>HTML5</span></div>
+                        <div class="skill"><i class="fab fa-css3-alt" aria-hidden="true"></i><span>CSS3</span></div>
+                        <div class="skill"><i class="fas fa-robot" aria-hidden="true"></i><span>N8N Workflows</span></div>
+                        <div class="skill"><i class="fas fa-brain" aria-hidden="true"></i><span>Agentes de IA</span></div>
+                        <div class="skill"><i class="fas fa-database" aria-hidden="true"></i><span>BPM/ECM</span></div>
+                        <div class="skill"><i class="fas fa-chart-bar" aria-hidden="true"></i><span>Analytics</span></div>
+                        <div class="skill"><i class="fas fa-shield-alt" aria-hidden="true"></i><span>LGPD</span></div>
                     </div>
                 </div>
             </div>
@@ -603,12 +104,9 @@
             <div class="container">
                 <h2>Meus Serviços</h2>
                 <p class="section-subtitle">Soluções completas para transformar seus processos corporativos</p>
-                
                 <div class="services-grid">
                     <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
+                        <div class="service-icon"><i class="fas fa-cogs" aria-hidden="true"></i></div>
                         <h3>TOTVS Fluig</h3>
                         <p>Implementação completa, customização de processos BPM/ECM, integração com sistemas legados e treinamento de usuários.</p>
                         <ul>
@@ -618,11 +116,8 @@
                             <li>Integração Active Directory</li>
                         </ul>
                     </div>
-                    
                     <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
+                        <div class="service-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
                         <h3>Agentes de IA N8N</h3>
                         <p>Desenvolvimento de agentes inteligentes e automações avançadas usando N8N para otimizar fluxos de trabalho.</p>
                         <ul>
@@ -632,11 +127,8 @@
                             <li>Automação de tarefas repetitivas</li>
                         </ul>
                     </div>
-                    
                     <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
+                        <div class="service-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
                         <h3>Desenvolvimento Front-End</h3>
                         <p>Criação de interfaces modernas e responsivas com as mais recentes tecnologias do mercado.</p>
                         <ul>
@@ -646,11 +138,8 @@
                             <li>Performance otimizada</li>
                         </ul>
                     </div>
-                    
                     <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
+                        <div class="service-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
                         <h3>Inteligência Artificial</h3>
                         <p>Implementação de soluções de IA para automação e otimização de processos empresariais.</p>
                         <ul>
@@ -660,11 +149,8 @@
                             <li>Integração com sistemas</li>
                         </ul>
                     </div>
-                    
                     <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
+                        <div class="service-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
                         <h3>Consultoria Técnica</h3>
                         <p>Análise de requisitos, arquitetura de soluções e gestão de projetos corporativos.</p>
                         <ul>
@@ -683,25 +169,17 @@
                 <h2>Meus Diferenciais</h2>
                 <div class="features-grid">
                     <div class="feature-card animate-on-scroll">
-                        <div class="feature-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
+                        <div class="feature-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
                         <h3>15+ Certificações</h3>
                         <p>Certificações oficiais TOTVS Fluig atualizadas em 2025, garantindo conhecimento sempre atualizado das melhores práticas do mercado.</p>
                     </div>
-                    
                     <div class="feature-card animate-on-scroll">
-                        <div class="feature-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
+                        <div class="feature-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></div>
                         <h3>Soluções Inovadoras</h3>
                         <p>Combinação única de TOTVS Fluig, desenvolvimento moderno e IA para criar soluções que realmente fazem a diferença nos negócios.</p>
                     </div>
-                    
                     <div class="feature-card animate-on-scroll">
-                        <div class="feature-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
+                        <div class="feature-icon"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
                         <h3>Automação N8N</h3>
                         <p>Criação de workflows inteligentes e agentes de IA que automatizam processos complexos, reduzindo custos operacionais e aumentando a eficiência das equipes.</p>
                     </div>
@@ -715,16 +193,13 @@
                 <p>Interessado em revolucionar os processos da sua empresa com soluções modernas e eficientes?</p>
                 <div class="contact-buttons">
                     <a href="mailto:matheuslnevoa@gmail.com" class="contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        Enviar E-mail
+                        <i class="fas fa-envelope" aria-hidden="true"></i> Enviar E-mail
                     </a>
-                    <a href="https://api.whatsapp.com/send/?phone=5551980289546" class="contact-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        WhatsApp
+                    <a href="https://api.whatsapp.com/send/?phone=5551980289546" class="contact-btn" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp em nova aba">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
                     </a>
-                    <a href="https://www.linkedin.com/in/matheus-n%C3%A9voa-b65b90115" class="contact-btn" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn
+                    <a href="https://www.linkedin.com/in/matheus-n%C3%A9voa-b65b90115" class="contact-btn" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil no LinkedIn em nova aba">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
                     </a>
                 </div>
             </div>
@@ -737,54 +212,11 @@
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(10, 25, 47, 0.98)';
-            } else {
-                header.style.background = 'rgba(10, 25, 47, 0.95)';
-            }
-        });
-
-        // Animate on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add floating animation to hero stats
-        document.querySelectorAll('.stat').forEach((stat, index) => {
-            stat.style.animationDelay = `${index * 0.2}s`;
-            stat.style.animation = 'float 3s ease-in-out infinite';
-        });
-    </script>
+    <!-- Bibliotecas Externas -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    
+    <!-- Script Local -->
+    <script src="script.js" defer></script>
 </body>
 </html>
