@@ -1,222 +1,207 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Matheus Névoa - Especialista TOTVS Fluig & Desenvolvedor Front-End</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfólio de Matheus Névoa, especialista em TOTVS Fluig, automação com N8N e Agentes de IA, e desenvolvimento front-end. Transformando processos com tecnologia.">
-    <meta name="keywords" content="Matheus Névoa, TOTVS Fluig, N8N, IA, Inteligência Artificial, Front-End, Desenvolvedor, Portfólio">
-    <meta name="author" content="Matheus Névoa">
-    
-    <!-- Open Graph (OG) Tags para compartilhamento social -->
-    <meta property="og:title" content="Matheus Névoa - Especialista TOTVS Fluig & IA">
-    <meta property="og:description" content="Portfólio profissional focado em automação de processos, desenvolvimento front-end e soluções com inteligência artificial.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.seusite.com.br"> <!-- SUBSTITUIR PELA URL REAL -->
-    <meta property="og:image" content="https://www.seusite.com.br/preview.jpg"> <!-- SUBSTITUIR PELA URL REAL DA IMAGEM -->
+    <title>Matheus Névoa - Especialista em Automação com n8n & IA</title>
 
-    <!-- Performance: Pré-conexão com o servidor de fontes -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    
-    <!-- Ícones (Font Awesome) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Folha de Estilos Local -->
+    <meta name="description"
+        content="Automatize processos, reduza custos e libere o potencial da sua equipe com soluções inteligentes de n8n e IA. Fale com Matheus Névoa, especialista em automação para negócios.">
+    <meta name="keywords"
+        content="Matheus Névoa, n8n, Automação, IA, Inteligência Artificial, Workflows, Automação de Processos">
+    <meta name="author" content="Matheus Névoa">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Névoa</div>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo" aria-label="Página Inicial">
+                <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/n8n-color.png"
+                    alt="Logo oficial do n8n">
+            </a>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#solutions">Soluções</a></li>
+                <li><a href="#portfolio">Resultados</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact" class="btn btn-nav">Contato</a></li>
             </ul>
-            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </button>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section class="hero" id="home">
             <div id="particles-container"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Matheus Névoa</h1>
-                    <h2><span id="typed-subtitle"></span></h2>
-                    <p class="hero-subtitle">Transformando Processos Corporativos com Automação Inteligente e IA</p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">4+</div>
-                            <div class="stat-label">Anos de Experiência</div>
+            <div class="hero-content container">
+                <h1 class="hero-title animate-on-scroll">Sua Empresa no Piloto Automático</h1>
+                <p class="hero-subtitle animate-on-scroll">Eu transformo processos manuais e repetitivos em workflows
+                    inteligentes com n8n e IA, para que sua empresa possa focar em crescer.</p>
+                <div class="hero-buttons animate-on-scroll" data-delay="1">
+                    <a href="#solutions" class="btn btn-primary">Conheça as Soluções</a>
+                    <a href="#contact" class="btn btn-secondary">Falar com um Especialista</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="problems-section" id="problems">
+            <div class="container section-container">
+                <h2 class="section-title animate-on-scroll">Sua equipe gasta mais tempo em planilhas do que com
+                    clientes?</h2>
+                <p class="section-subtitle animate-on-scroll">Tarefas manuais, erros de digitação e sistemas que não se
+                    conversam são os maiores ladrões de produtividade e lucro.</p>
+                <div class="problems-grid">
+                    <div class="problem-card animate-on-scroll" data-delay="0">
+                        <div class="problem-icon"><i class="fas fa-hourglass-half"></i></div>
+                        <h3 class="problem-title">Tempo Desperdiçado</h3>
+                        <p>Horas de trabalho valiosas são perdidas em "copia e cola", preenchimento de formulários e
+                            envio de e-mails manuais.</p>
+                    </div>
+                    <div class="problem-card animate-on-scroll" data-delay="1">
+                        <div class="problem-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h3 class="problem-title">Custos Ocultos</h3>
+                        <p>Cada erro manual gera retrabalho e cada processo lento representa uma oportunidade perdida. O
+                            custo disso é alto.</p>
+                    </div>
+                    <div class="problem-card animate-on-scroll" data-delay="2">
+                        <div class="problem-icon"><i class="fas fa-link-slash"></i></div>
+                        <h3 class="problem-title">Sistemas Desconectados</h3>
+                        <p>Seu CRM não fala com seu ERP? Suas planilhas não atualizam seu sistema de marketing? A falta
+                            de integração cria silos e ineficiência.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="solutions-section" id="solutions">
+            <div class="container section-container">
+                <h2 class="section-title animate-on-scroll">Automação Inteligente com n8n: A Solução Definitiva</h2>
+                <div class="solutions-grid">
+                    <div class="solution-card animate-on-scroll" data-delay="0">
+                        <div class="solution-icon"><i class="fas fa-cogs"></i></div>
+                        <h3 class="solution-title">Workflows de Automação</h3>
+                        <p>Desenho e implemento fluxos de trabalho que conectam suas ferramentas (Google Sheets, Slack,
+                            Trello, CRMs, APIs) e executam tarefas automaticamente, 24/7, sem erros.</p>
+                    </div>
+                    <div class="solution-card animate-on-scroll" data-delay="1">
+                        <div class="solution-icon"><i class="fas fa-robot"></i></div>
+                        <h3 class="solution-title">Agentes de IA</h3>
+                        <p>Integro modelos de Inteligência Artificial (como o GPT da OpenAI) aos seus workflows para
+                            qualificar leads, gerar relatórios, categorizar suporte e tomar decisões inteligentes.</p>
+                    </div>
+                    <div class="solution-card animate-on-scroll" data-delay="2">
+                        <div class="solution-icon"><i class="fas fa-sitemap"></i></div>
+                        <h3 class="solution-title">Consultoria Estratégica</h3>
+                        <p>Mapeio seus processos atuais, identifico os principais gargalos de automação e apresento um
+                            plano de ação claro para maximizar seu Retorno Sobre o Investimento (ROI).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="portfolio">
+            <div class="container section-container">
+                <h2 class="section-title animate-on-scroll">Resultados Reais para Empresas como a Sua</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card animate-on-scroll" data-delay="0">
+                        <div class="portfolio-content">
+                            <span class="portfolio-tag">E-commerce</span>
+                            <h3 class="portfolio-title">+80% de Eficiência no Processamento de Pedidos</h3>
+                            <p class="portfolio-description">Automação do fluxo de confirmação de pagamento, emissão de
+                                nota fiscal e atualização de status no CRM, reduzindo o tempo de processamento de 15
+                                para 2 minutos.</p>
                         </div>
-                        <div class="stat">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Certificações</div>
+                    </div>
+                    <div class="portfolio-card animate-on-scroll" data-delay="1">
+                        <div class="portfolio-content">
+                            <span class="portfolio-tag">Marketing Digital</span>
+                            <h3 class="portfolio-title">Lead Scoring e Qualificação 100% Automatizados</h3>
+                            <p class="portfolio-description">Criação de um agente de IA que analisa, pontua e distribui
+                                leads para a equipe de vendas em tempo real, aumentando a taxa de conversão em 35%.</p>
                         </div>
-                        <div class="stat">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Projetos Entregues</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container section-container">
+                <h2 class="section-title animate-on-scroll">O Especialista por Trás da Automação</h2>
+                <div class="timeline">
+                    <div class="timeline-item animate-on-scroll" data-delay="0">
+                        <div class="timeline-icon"><i class="fas fa-cogs"></i></div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Base Sólida em Processos</h4>
+                            <p>Iniciei minha carreira entendendo a fundo os processos corporativos, o que me permite
+                                hoje não apenas automatizar, mas otimizar o fluxo de trabalho de ponta a ponta.</p>
                         </div>
                     </div>
-                    <div class="hero-buttons">
-                        <a href="#contato" class="btn btn-primary">Vamos Conversar</a>
-                        <a href="#servicos" class="btn btn-secondary">Meus Serviços</a>
+                    <div class="timeline-item animate-on-scroll" data-delay="1">
+                        <div class="timeline-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Especialização em n8n</h4>
+                            <p>Adotei o n8n como a principal ferramenta por sua flexibilidade e poder, tornando-me um
+                                especialista em criar automações robustas e escaláveis que se adaptam a qualquer
+                                negócio.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll" data-delay="2">
+                        <div class="timeline-icon"><i class="fas fa-brain"></i></div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">A Fronteira da Inteligência Artificial</h4>
+                            <p>Hoje, meu foco está em ir além da automação simples, integrando IA para criar sistemas
+                                que não apenas executam tarefas, mas também analisam, aprendem e decidem.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="about">
-            <div class="container">
-                <div class="about-content animate-on-scroll">
-                    <div class="about-text">
-                        <h2>Transformando Ideias em Soluções</h2>
-                        <p>Com mais de 4 anos de experiência, sou especialista em <strong>TOTVS Fluig</strong> com 15+ certificações oficiais e sólida formação em desenvolvimento web moderno.</p>
-                        <p>Minha expertise única combina conhecimento profundo em processos corporativos, desenvolvimento front-end e automação inteligente com IA, criando soluções que realmente transformam negócios.</p>
-                        <p>Atualmente cursando <strong>Tecnologia em Análise e Desenvolvimento de Sistemas</strong> para manter-me sempre atualizado com as mais recentes tecnologias do mercado.</p>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill"><i class="fas fa-cogs" aria-hidden="true"></i><span>TOTVS Fluig</span></div>
-                        <div class="skill"><i class="fab fa-react" aria-hidden="true"></i><span>React</span></div>
-                        <div class="skill"><i class="fab fa-js" aria-hidden="true"></i><span>JavaScript ES6+</span></div>
-                        <div class="skill"><i class="fab fa-html5" aria-hidden="true"></i><span>HTML5</span></div>
-                        <div class="skill"><i class="fab fa-css3-alt" aria-hidden="true"></i><span>CSS3</span></div>
-                        <div class="skill"><i class="fas fa-robot" aria-hidden="true"></i><span>N8N Workflows</span></div>
-                        <div class="skill"><i class="fas fa-brain" aria-hidden="true"></i><span>Agentes de IA</span></div>
-                        <div class="skill"><i class="fas fa-database" aria-hidden="true"></i><span>BPM/ECM</span></div>
-                        <div class="skill"><i class="fas fa-chart-bar" aria-hidden="true"></i><span>Analytics</span></div>
-                        <div class="skill"><i class="fas fa-shield-alt" aria-hidden="true"></i><span>LGPD</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="servicos" class="services">
-            <div class="container">
-                <h2>Meus Serviços</h2>
-                <p class="section-subtitle">Soluções completas para transformar seus processos corporativos</p>
-                <div class="services-grid">
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon"><i class="fas fa-cogs" aria-hidden="true"></i></div>
-                        <h3>TOTVS Fluig</h3>
-                        <p>Implementação completa, customização de processos BPM/ECM, integração com sistemas legados e treinamento de usuários.</p>
-                        <ul>
-                            <li>Instalação e configuração</li>
-                            <li>Desenvolvimento de workflows</li>
-                            <li>Fluig Analytics e dashboards</li>
-                            <li>Integração Active Directory</li>
-                        </ul>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
-                        <h3>Agentes de IA N8N</h3>
-                        <p>Desenvolvimento de agentes inteligentes e automações avançadas usando N8N para otimizar fluxos de trabalho.</p>
-                        <ul>
-                            <li>Criação de workflows automatizados</li>
-                            <li>Integração entre sistemas</li>
-                            <li>Agentes conversacionais</li>
-                            <li>Automação de tarefas repetitivas</li>
-                        </ul>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
-                        <h3>Desenvolvimento Front-End</h3>
-                        <p>Criação de interfaces modernas e responsivas com as mais recentes tecnologias do mercado.</p>
-                        <ul>
-                            <li>React & JavaScript ES6+</li>
-                            <li>HTML5 & CSS3</li>
-                            <li>Interfaces responsivas</li>
-                            <li>Performance otimizada</li>
-                        </ul>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
-                        <h3>Inteligência Artificial</h3>
-                        <p>Implementação de soluções de IA para automação e otimização de processos empresariais.</p>
-                        <ul>
-                            <li>Automação de processos</li>
-                            <li>Análise de dados</li>
-                            <li>Chatbots corporativos</li>
-                            <li>Integração com sistemas</li>
-                        </ul>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
-                        <h3>Consultoria Técnica</h3>
-                        <p>Análise de requisitos, arquitetura de soluções e gestão de projetos corporativos.</p>
-                        <ul>
-                            <li>Análise de processos</li>
-                            <li>Arquitetura de sistemas</li>
-                            <li>Gestão de projetos</li>
-                            <li>Treinamento de equipes</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features">
-            <div class="container">
-                <h2>Meus Diferenciais</h2>
-                <div class="features-grid">
-                    <div class="feature-card animate-on-scroll">
-                        <div class="feature-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
-                        <h3>15+ Certificações</h3>
-                        <p>Certificações oficiais TOTVS Fluig atualizadas em 2025, garantindo conhecimento sempre atualizado das melhores práticas do mercado.</p>
-                    </div>
-                    <div class="feature-card animate-on-scroll">
-                        <div class="feature-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></div>
-                        <h3>Soluções Inovadoras</h3>
-                        <p>Combinação única de TOTVS Fluig, desenvolvimento moderno e IA para criar soluções que realmente fazem a diferença nos negócios.</p>
-                    </div>
-                    <div class="feature-card animate-on-scroll">
-                        <div class="feature-icon"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
-                        <h3>Automação N8N</h3>
-                        <p>Criação de workflows inteligentes e agentes de IA que automatizam processos complexos, reduzindo custos operacionais e aumentando a eficiência das equipes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="contact">
-            <div class="container">
-                <h2>Vamos Transformar Seu Negócio?</h2>
-                <p>Interessado em revolucionar os processos da sua empresa com soluções modernas e eficientes?</p>
-                <div class="contact-buttons">
-                    <a href="mailto:matheuslnevoa@gmail.com" class="contact-btn">
-                        <i class="fas fa-envelope" aria-hidden="true"></i> Enviar E-mail
-                    </a>
-                    <a href="https://api.whatsapp.com/send/?phone=5551980289546" class="contact-btn" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp em nova aba">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
-                    </a>
-                    <a href="https://www.linkedin.com/in/matheus-n%C3%A9voa-b65b90115" class="contact-btn" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil no LinkedIn em nova aba">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <section class="contact-section" id="contact">
+            <div class="container section-container text-center">
+                <h2 class="contact-title animate-on-scroll">Pronto para eliminar o trabalho manual?</h2>
+                <p class="contact-subtitle animate-on-scroll">Vamos agendar uma conversa de 15 minutos para eu entender
+                    seu desafio e mostrar o potencial da automação para o seu negócio. Sem compromisso.</p>
+                <div class="animate-on-scroll" data-delay="1">
+                    <a href="https://wa.me/5551980289546?text=Olá!%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20automação."
+                        target="_blank" class="btn-whatsapp-small">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Agendar no WhatsApp</span>
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Matheus Névoa. Transformando processos corporativos com tecnologia e IA.</p>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p class="copyright">&copy; 2025 Matheus Névoa — Automação Inteligente para Negócios</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/matheus-n%C3%A9voa-b65b90115/" target="_blank"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/matheusnevoa" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://x.com/seu_usuario_aqui" target="_blank" aria-label="X (Twitter)"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+            </div>
         </div>
     </footer>
 
-    <!-- Bibliotecas Externas -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-    
-    <!-- Script Local -->
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
